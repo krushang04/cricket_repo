@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Winning Probability Estimator</title>
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Cricket Winning Probability Estimator</h1>
+        <form id="estimatorForm">
+            <div class="form-group">
+                <label for="team_a">Team A:</label>
+                <input type="text" id="team_a" name="team_a" required>
+            </div>
+            <div class="form-group">
+                <label for="team_b">Team B:</label>
+                <input type="text" id="team_b" name="team_b" required>
+            </div>
+            <div class="form-group">
+                <label for="batting_first">Team Batting First:</label>
+                <select id="batting_first" name="batting_first" required>
+                    <option value="">Select team</option>
+                    <option value="team_a">Team A</option>
+                    <option value="team_b">Team B</option>
+                </select>
+            </div>
+            <h3>Second Innings</h3>
+            <div class="form-group">
+                <label for="runs_scored">Runs Scored:</label>
+                <input type="number" id="runs_scored" name="runs_scored" required>
+            </div>
+            <div class="form-group">
+                <label for="wickets_fallen">Wickets Fallen:</label>
+                <input type="number" id="wickets_fallen" name="wickets_fallen" required>
+            </div>
+            <div class="form-group">
+                <label for="overs_completed">Overs Completed:</label>
+                <input type="number" id="overs_completed" name="overs_completed" step="0.1" required>
+            </div>
+            <div class="form-group">
+                <label for="runs_required">Runs Required to Win:</label>
+                <input type="number" id="runs_required" name="runs_required" required>
+            </div>
+            <button type="submit">Estimate Probability</button>
+        </form>
+        <div id="result"></div>
+    </div>
+    <script src="../static/script.js"></script>
+</body>
+</html>
